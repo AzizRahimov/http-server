@@ -10,13 +10,13 @@ import (
 
 func Test_serverStarting(t *testing.T) {
 	go func() {
-		err := start("localhost:3333")
+		err := start("localhost:9999")
 		if err != nil {
 			t.Fatalf("can't start server: %v", err)
 		}
 	}()
 	time.Sleep(time.Second)
-	conn, err := net.Dial("tcp", "localhost:3333")
+	conn, err := net.Dial("tcp", "localhost:9999")
 	if err != nil {
 		t.Fatalf("can't connect to server: %v", err)
 	}

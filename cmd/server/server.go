@@ -27,7 +27,7 @@ func main() {
 	host := "0.0.0.0"
 	port, ok := os.LookupEnv("PORT")
 	if !ok {
-		port = "9998"
+		port = "9999"
 	}
 	err := start(fmt.Sprintf("%v:%v", host, port)) // 0.0.0.0:9998
 	if err != nil {
